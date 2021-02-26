@@ -20,7 +20,7 @@ module.exports = {
       options: {
         shopName: 'facturestudio',
         accessToken: 'ab284750eebd4c98d0a25914ef341d52',
-        apiVersion: '2021-01',
+        apiVersion: '2020-07',
       },
     },
     `gatsby-plugin-styled-components`,

@@ -1,4 +1,5 @@
 import React from 'react';
+import { GlobalStyles } from './src/components/globalStyles'
 
 export const wrapRootElement = ({ element }) => (
   <>
@@ -7,7 +8,8 @@ export const wrapRootElement = ({ element }) => (
 );
 
 export const wrapPageElement = ({ element }) => (
-  <>
-    {element}
-  </>
+    <>
+      <GlobalStyles />
+      {element}
+    </>
 );
