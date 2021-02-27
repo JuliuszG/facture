@@ -5,20 +5,7 @@ import reset from 'styled-reset'
 const GlobalStyle = createGlobalStyle`
     ${ reset }
     box-sizing: border-box;
-    @font-face {
-        font-family: 'Butler';
-        src: url('/fonts/Butler.woff2') format("woff2");
-        font-style: normal;
-        font-weight: 400;
-        font-display: fallback;
-    } 
-    @font-face {
-        font-family: 'Butler';
-        src: url('/fonts/Butler-Light.woff2') format("woff2");
-        font-style: normal;
-        font-weight: 300;
-        font-display: fallback;
-    }   
+    @import url('http://fonts.cdnfonts.com/css/butler');
     .no-font {
         font-family: serif;
         font-weight: 400;
