@@ -5,7 +5,7 @@ import reset from 'styled-reset'
 const GlobalStyle = createGlobalStyle`
     ${ reset }
     box-sizing: border-box;
-    @import url('http://fonts.cdnfonts.com/css/butler');
+    @import url('https://fonts.cdnfonts.com/css/butler');
     .no-font {
         font-family: serif;
         font-weight: 400;
