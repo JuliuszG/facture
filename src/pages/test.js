@@ -17,7 +17,7 @@ export const query = graphql`
 
 const Image = styled(Img)`
 img {
- height: 300%;   
+ height: 300%auto;   
 }
 width: 2%;
 height: 2%;

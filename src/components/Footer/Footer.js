@@ -1,31 +1,20 @@
 import React from 'react';
 import {graphql , useStaticQuery} from 'gatsby'; 
-import Img from 'gatsby-image';
+import Continer from '../Layout/Container';
+import Section from '../Layout/Section' ;
+import Form from './Form/Form';
 
-const Image = () => {
-    
-    const { file } = useStaticQuery(graphql `
-    {
-        file(relativePath: {eq: "icon/logo.png"}) {
-          childImageSharp {
-            fluid {
-                ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `);
 
+const Footer = () => {
     return (
         <>
-            <Img fluid = {file.childImageSharp.fluid} imgStyle = {
-                {
-                    width: '20%',
-                    height: '20%'
-                }
-            }/> 
+         <Section color = '#191919' height = '55.70vh' >
+            <Continer>
+                <Form/>
+            </Continer>
+        </Section>     
         </>
     )
 } 
 
-export default Image;
+export default Footer;
