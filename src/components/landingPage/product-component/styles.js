@@ -13,6 +13,15 @@ export const ProductComponentWrapper = styled.div`
     font-size: 16px;
     text-align: center;
     overflow: hidden;
+    @media (max-width: 1024px) and (max-height: 1024px ) {
+        font-size: 14px;
+        padding: 0 10%;
+        height: 100vh;
+    }
+    @media (max-width: 450px) {
+        font-size: 12px;
+        padding: 0 10%;
+    }
     .content {
         z-index: 10;
     }
@@ -54,6 +63,9 @@ export const ButtonLink = styled(motion.div)`
     cursor: pointer;
     transition: all 0.3s ease-in;
     display: inline-block;
+    @media (max-width: 1024px) {
+        margin-bottom: 10%;
+    }
     a {
         color: ${ ({ themeColor }) => themeColor === 'light' ? '#fff' : '#191919' };
         text-decoration: none;
