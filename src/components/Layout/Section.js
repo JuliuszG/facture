@@ -4,6 +4,8 @@ const Section = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: ${({ color }) => color ? color : 'none' }; 
+    height: ${({ height }) => height ? height : '' }; 
 `
 
 export default Section;
