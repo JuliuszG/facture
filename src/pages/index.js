@@ -1,5 +1,6 @@
 import React from "react"
 import SEO from "../components/seo"
+import Footer from "../components/Footer/Footer";
 
 const IndexPage = () => (
   <>
@@ -16,6 +17,7 @@ const IndexPage = () => (
     <p className="pop">
     The spectacle before us was indeed sublime.
     </p>
+    <Footer/>
   </>
 )
 
