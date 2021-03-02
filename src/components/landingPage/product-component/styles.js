@@ -33,6 +33,17 @@ export const ProductComponentWrapper = styled.div`
         font-weight: 300;
         text-transform: uppercase;
         line-height: 150%;
+        &.decoration {
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 2.5em;
+                background: ${ ({ themeColor }) => themeColor === 'light' ? '#fff' : '#191919' };;
+                height: 1px;
+                margin-right: 12px;
+                margin-bottom: 0.25em;
+            }
+        }
     }
     p {
         font-weight: 400;
@@ -46,7 +57,7 @@ export const ProductComponentWrapper = styled.div`
         font-weight: 300;
         color: ${ ({ themeColor }) => themeColor === 'light' ? '#fff' : '#191919' };
         margin: 23px 0 10px;
-        max-width: ${ ({ smallHeader }) => smallHeader && '400px' };;
+        max-width: ${ ({ titleSize }) => titleSize && titleSize };
     }
     a {
         border: 1px solid ${ ({ themeColor }) => themeColor === 'light' ? '#fff' : '#191919' };
@@ -80,4 +91,27 @@ export const ProductImage = styled(motion.div)`
     left: 0;
     width: 100%;
     height: 100%;
+`
+export const LeftImage = styled.div`
+    position: absolute;
+    bottom: 7.77%;
+    left: 6.94%;
+    height: 38.88%;
+    width: 19.79%;
+    @media (max-width: 968px){
+        height: 33.88%;
+        width: 45%;
+    }
+`
+
+export const RightImage = styled.div`
+    position: absolute;
+    top: 7.77%;
+    right: 6.94%;
+    height: 52.77%;
+    width: 30.90%;
+    @media (max-width: 968px){
+        height: 33.88%;
+        width: 45%;
+    }
 `

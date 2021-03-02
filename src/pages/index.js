@@ -7,35 +7,49 @@ export const query = graphql`
   {
     section1: file(relativePath: {eq: "banner/banner1.png"}) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     section2: file(relativePath: {eq: "banner/banner2.png"}) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100)  {
           ...GatsbyImageSharpFluid
         }
       }
     }
     section3: file(relativePath: {eq: "banner/banner3.png"}) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100)  {
           ...GatsbyImageSharpFluid
         }
       }
     }
     section4: file(relativePath: {eq: "banner/banner4.png"}) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100)  {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    section5img1: file(relativePath: {eq: "banner/banner6_1.png"}) {
+      childImageSharp {
+        fluid(quality: 100)  {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    section5img2: file(relativePath: {eq: "banner/banner6_2.png"}) {
+      childImageSharp {
+        fluid(quality: 100)  {
           ...GatsbyImageSharpFluid
         }
       }
     }
     section6: file(relativePath: {eq: "banner/banner7.png"}) {
       childImageSharp {
-        fluid {
+        fluid(quality: 100)  {
           ...GatsbyImageSharpFluid
         }
       }
@@ -55,10 +69,12 @@ const IndexPage = ({ data }) => (
         title: 'Ripple Chaise Lounge',
         paragraph: 'This piece is an imaginative re-interpretation of the classic chaise lounge.'
       }}
-      image={{
-        src: data.section1.childImageSharp.fluid,
-        alt: "Background Image"
-      }}
+      image={[
+        {
+          src: data.section1.childImageSharp.fluid,
+          alt: "Background Image"
+        }
+      ]}
       link={{
         name: "See Sittings",
         url: "/products?tag=sittings"
@@ -73,10 +89,12 @@ const IndexPage = ({ data }) => (
         title: 'Offset Round',
         paragraph: 'This wall object playfully references the human eye itself.'
       }}
-      image={{
-        src: data.section2.childImageSharp.fluid,
-        alt: "Background Image"
-      }}
+      image={[
+        {
+          src: data.section2.childImageSharp.fluid,
+          alt: "Background Image"
+        }
+      ]}
       link={{
         name: "See Wall",
         url: "/products?tag=wall"
@@ -91,10 +109,12 @@ const IndexPage = ({ data }) => (
         title: 'Ripple Table',
         paragraph: 'The Ripple Dining Table consists of a circular top set on a tapered conical base'
       }}
-      image={{
-        src: data.section3.childImageSharp.fluid,
-        alt: "Background Image"
-      }}
+      image={[
+        {
+          src: data.section3.childImageSharp.fluid,
+          alt: "Background Image"
+        }
+      ]}
       link={{
         name: "See Tables",
         url: "/products?tag=tables"
@@ -109,14 +129,42 @@ const IndexPage = ({ data }) => (
         title: 'Green Column',
         paragraph: 'The Green Column consists of a circular top set on a tapered conical base'
       }}
-      image={{
-        src: data.section4.childImageSharp.fluid,
-        alt: "Background Image"
-      }}
+      image={[
+        {
+          src: data.section4.childImageSharp.fluid,
+          alt: "Background Image"
+        }
+      ]}
       link={{
         name: "See Objects",
         url: "/products?tag=objects"
       }}
+    />
+      <ProductComponent 
+      alignment="center" 
+      themeColor="dark" 
+      height="big"
+      content={{
+        category: 'DEsign Studio',
+        title: 'Experimenting with Color, Light & Transparency',
+      }}
+      image={[
+        {
+          src: data.section5img1.childImageSharp.fluid,
+          alt: "Background Image"
+        },
+        {
+          src: data.section5img2.childImageSharp.fluid,
+          alt: "Background Image"
+        }
+      ]}
+      link={{
+        name: "About Us",
+        url: "/about"
+      }}
+      titleSize={ '450px' }
+      doubleImage={ true }
+      categoryDecoration={ true }
     />
       <ProductComponent 
       alignment="center" 
@@ -126,15 +174,17 @@ const IndexPage = ({ data }) => (
         category: 'Custom',
         title: 'Work With Us to — Customize Your Products',
       }}
-      image={{
-        src: data.section6.childImageSharp.fluid,
-        alt: "Background Image"
-      }}
+      image={[
+        {
+          src: data.section6.childImageSharp.fluid,
+          alt: "Background Image"
+        }
+      ]}
       link={{
         name: "Custom Inquire",
         url: "/products/custom"
       }}
-      smallHeader={ true }
+      titleSize={ '400px' }
     />
   </>
 )
