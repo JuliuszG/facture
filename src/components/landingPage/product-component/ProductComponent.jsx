@@ -1,17 +1,20 @@
 import React from 'react'
-import { ProductComponentWrapper, ProductImage, ButtonLink } from './styles.js'
+import { ProductComponentWrapper, ProductImage } from './styles.js'
 import { motion } from 'framer-motion'
-import { contentVariant, textVariant, buttonVariant } from './animations'
+import { contentVariant, textVariant, imageVariant } from './animations'
 import { Link } from 'gatsby'
 import { useInView } from 'react-intersection-observer';
+import Image from 'gatsby-image'
 
-const ProductComponent = ({ alignment, themeColor, height, content, image, link }) => {
+const ProductComponent = ({ alignment, themeColor, height, content, image, link, smallHeader=false }) => {
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 1
       });
     return (
-        <ProductComponentWrapper alignment={ alignment } themeColor={ themeColor } height={ height }>
+        <ProductComponentWrapper 
+            alignment={ alignment } themeColor={ themeColor } height={ height } smallHeader={ smallHeader }
+        >
             <motion.div 
                 className="content"
                 variants={ contentVariant }
@@ -21,20 +24,27 @@ const ProductComponent = ({ alignment, themeColor, height, content, image, link 
             >
                 <motion.div className="small" variants={ textVariant }>{ content.category }</motion.div>
                 <motion.h2 variants={ textVariant }>{ content.title }</motion.h2>
-                <motion.p variants={ textVariant }>{ content.paragraph }</motion.p>
-                <ButtonLink variants={ buttonVariant } themeColor={ themeColor }>
+                { content.paragraph && (
+                    <motion.p variants={ textVariant }>{ content.paragraph }</motion.p>
+                ) }
+                <motion.div variants={ textVariant }>
                     <Link to={ link.url }>
                         { link.name }<span>&#x2B;</span>
                     </Link>
-                </ButtonLink>
+                </motion.div>
             </motion.div>
             <ProductImage 
-                style={{ position: "absolute", top: 0, left: 0, objectFit: "cover" }} 
-                fluid={ image.src } 
-                alt={ image.alt } 
-                objectFit="cover"
-                fadeIn={ true }
-            />
+                variants={ imageVariant }
+                initial="hidden"
+                animate={ inView ? "visible" : "hidden" }
+            >
+                <Image 
+                    style={{ height: "100%", width: "100%", objectFit: "cover" }} 
+                    fluid={ image.src } 
+                    alt={ image.alt } 
+                    objectFit="cover"
+                />
+            </ProductImage>       
         </ProductComponentWrapper>
     )
 }

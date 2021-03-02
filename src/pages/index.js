@@ -33,6 +33,13 @@ export const query = graphql`
         }
       }
     }
+    section6: file(relativePath: {eq: "banner/banner7.png"}) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
 `
 
@@ -110,6 +117,24 @@ const IndexPage = ({ data }) => (
         name: "See Objects",
         url: "/products?tag=objects"
       }}
+    />
+      <ProductComponent 
+      alignment="center" 
+      themeColor="light" 
+      height="big"
+      content={{
+        category: 'Custom',
+        title: 'Work With Us to — Customize Your Products',
+      }}
+      image={{
+        src: data.section6.childImageSharp.fluid,
+        alt: "Background Image"
+      }}
+      link={{
+        name: "Custom Inquire",
+        url: "/products/custom"
+      }}
+      smallHeader={ true }
     />
   </>
 )

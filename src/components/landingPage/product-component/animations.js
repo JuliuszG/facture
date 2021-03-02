@@ -14,12 +14,7 @@ export const textVariant = {
     hidden: { opacity: 0 },
 }
 
-export const buttonVariant = {
-    visible: { opacity: 1, transition: { duration: 0.5 } },
-    hidden: { opacity: 0 },
-}
-
 export const imageVariant = {
-    visible: { scale: 1, transition: { duration: 0.5 } },
-    hidden: { scale: 1.3 },
+    visible: { scale: 1, transition: { duration: 1} },
+    hidden: { scale: 1.1 },
 }
