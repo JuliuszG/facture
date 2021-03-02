@@ -48,7 +48,6 @@ export const ProductComponentWrapper = styled.div`
     p {
         font-weight: 400;
         line-height: 178.57%;
-        margin-bottom: 40px;
     }
     h2 {
         font-size: 3.75em;
@@ -75,6 +74,7 @@ export const ProductComponentWrapper = styled.div`
         font-weight: 300;
         font-size: 1em;
         text-transform: uppercase;
+        margin-top: 40px;
         span{
             margin-left: 32px;
         }
@@ -92,7 +92,7 @@ export const ProductImage = styled(motion.div)`
     width: 100%;
     height: 100%;
 `
-export const LeftImage = styled.div`
+export const LeftImage = styled(motion.div)`
     position: absolute;
     bottom: 7.77%;
     left: 6.94%;
@@ -104,7 +104,7 @@ export const LeftImage = styled.div`
     }
 `
 
-export const RightImage = styled.div`
+export const RightImage = styled(motion.div)`
     position: absolute;
     top: 7.77%;
     right: 6.94%;
