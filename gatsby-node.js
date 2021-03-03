@@ -2,7 +2,7 @@ const path = require('path');
 
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
-    const { data } = await graphql(`
+    const products = await graphql(`
       {
         allShopifyProduct {
           edges {
@@ -14,7 +14,7 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     `)
-    data.allShopifyProduct.edges.forEach(({ node }) => {
+    products.data.allShopifyProduct.edges.forEach(({ node }) => {
       createPage({
         path: `products/${ node.handle }`,
         context: {
