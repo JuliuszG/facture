@@ -5,8 +5,9 @@ import {graphql , useStaticQuery} from 'gatsby';
 import Img from 'gatsby-image';
 
 const Images = styled.div`
-max-width: 156.92px;
-height: 100%;
+width: 157px;
+height: 20px;
+
 `
 
 const Logo = () => {
@@ -14,7 +15,7 @@ const Logo = () => {
     {
         file(relativePath: {eq: "icon/Logo-Wordmark.png"}) {
           childImageSharp {
-            fluid(quality: 100) {
+            fluid(quality: 100, maxWidth: 157, maxHeight: 20) {
                 ...GatsbyImageSharpFluid
             }
           }
