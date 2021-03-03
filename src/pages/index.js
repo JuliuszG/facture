@@ -57,13 +57,12 @@ export const query = graphql`
     }
   }
 `
-
 const IndexPage = ({ data }) => (
   <>
     <SEO title="Home" />
-    <ProductComponent 
-      alignment="center" 
-      themeColor="light" 
+    <ProductComponent
+      alignment="center"
+      themeColor="light"
       height="small"
       content={{
         category: 'sitting',
@@ -81,9 +80,9 @@ const IndexPage = ({ data }) => (
         url: "/products?tag=sittings"
       }}
     />
-      <ProductComponent 
-      alignment="bottom" 
-      themeColor="dark" 
+      <ProductComponent
+      alignment="bottom"
+      themeColor="dark"
       height="big"
       content={{
         category: 'Wall',
@@ -101,9 +100,9 @@ const IndexPage = ({ data }) => (
         url: "/products?tag=wall"
       }}
     />
-     <ProductComponent 
-      alignment="center" 
-      themeColor="light" 
+     <ProductComponent
+      alignment="center"
+      themeColor="light"
       height="big"
       content={{
         category: 'Tables',
@@ -121,9 +120,9 @@ const IndexPage = ({ data }) => (
         url: "/products?tag=tables"
       }}
     />
-    <ProductComponent 
-      alignment="bottom" 
-      themeColor="dark" 
+    <ProductComponent
+      alignment="bottom"
+      themeColor="dark"
       height="big"
       content={{
         category: 'Objects',
@@ -171,9 +170,9 @@ const IndexPage = ({ data }) => (
       doubleImage={ true }
       categoryDecoration={ true }
     />
-      <ProductComponent 
-      alignment="center" 
-      themeColor="light" 
+      <ProductComponent
+      alignment="center"
+      themeColor="light"
       height="big"
       content={{
         category: 'Custom',
@@ -193,5 +192,4 @@ const IndexPage = ({ data }) => (
     />
   </>
 )
-
 export default IndexPage
