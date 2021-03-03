@@ -1,11 +1,11 @@
 import React from 'react';
-import ColStyled from './style/ColStyle';
+import ColStyle from './style/ColStyle';
 import TitleStyle from './style/TitleStyle';
 import LiStyle from './style/LiStyle';
 
 const Col1 = () => {
     return (
-        <ColStyled margin = '106px 0 0 113px' width = '74px'>
+        <ColStyle margin = '106px 0 0 113px'>
             <TitleStyle>Company</TitleStyle>
             <ul>
                 <LiStyle><a href="">About US</a></LiStyle>
@@ -13,7 +13,7 @@ const Col1 = () => {
                 <LiStyle><a href="">Stories</a></LiStyle>
                 <LiStyle><a href="">Trade</a></LiStyle>
             </ul>
-        </ColStyled>
+        </ColStyle>
     )
 }
 

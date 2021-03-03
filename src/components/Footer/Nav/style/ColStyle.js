@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ColStyled = styled.div`
+const ColStyle = styled.div`
 
 a{
     color: white;
@@ -20,4 +20,4 @@ font-family: Poppins, sans-serif;
 
 `
 
-export default ColStyled;
+export default ColStyle;

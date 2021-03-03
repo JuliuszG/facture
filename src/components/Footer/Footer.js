@@ -10,7 +10,7 @@ const Footer = () => {
     return (
         <>
          <Section color = '#191919' height = '527px' >
-            <Continer display= 'flex'>
+            <Continer display= 'flex' justify-content= 'space-between'>
                 <Form/>
                 <Nav/>
             </Continer>

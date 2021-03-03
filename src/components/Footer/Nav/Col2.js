@@ -5,7 +5,7 @@ import ColStyle from './style/ColStyle';
 
 const Col2 = () => {
     return (
-        <ColStyle margin = '106px 0 0 129px' width = '73px'>
+        <ColStyle margin = '106px 0 0 0' >
             <TitleStyle>Shop</TitleStyle>
             <ul>
                 <LiStyle><a href="">Table</a></LiStyle>

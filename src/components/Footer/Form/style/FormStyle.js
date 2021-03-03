@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 const FormStyle = styled.div`
-width: 28.154%;
+max-width: 366px;
+width: 100%;
 
 `
 
