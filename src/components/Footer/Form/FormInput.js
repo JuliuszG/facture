@@ -8,7 +8,7 @@ const FormInput = () => {
         <>
          <FormInputStyle action="">
              <Input type="text" placeholder="Enter your email" />
-             <Button type="submit" value="Subscribe" />
+             <Button type="submit" value="SUBSCRIBE" />
          </FormInputStyle>    
         </>
     )

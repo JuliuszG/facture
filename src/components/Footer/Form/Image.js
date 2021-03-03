@@ -9,7 +9,7 @@ const Image = () => {
     {
         file(relativePath: {eq: "icon/logo.png"}) {
           childImageSharp {
-            fluid {
+            fluid(quality: 100) {
                 ...GatsbyImageSharpFluid
             }
           }
@@ -18,9 +18,9 @@ const Image = () => {
     `);
 
       const Images = styled.div`
-        width: 2.9820vw;
-        height: 7.881vh;
-        margin-top: 16.0919vh;
+        max-width: 38px;
+        width: 100%;
+        margin-top: 98px;
       `
 
     return (
