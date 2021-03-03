@@ -10,9 +10,6 @@ import TwitImg from './style/TwitImg';
 import PintImg from './style/PintImg';
 
  const Col4 = () => {
-
-
-
      return (
          <ColStyle margin = '106px 0 0 0'>
              <TitleStyle>Connect</TitleStyle>
