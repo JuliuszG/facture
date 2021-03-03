@@ -7,7 +7,7 @@ import Nav from './Nav/Nav';
 const Header = () => {
     return (
         <Section height = '83px'>
-            <Container>
+            <Container display= 'flex'>
                 <Logo/>
                 <Nav/>
             </Container>

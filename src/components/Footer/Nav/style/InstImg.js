@@ -4,6 +4,11 @@ import {graphql , useStaticQuery} from 'gatsby';
 import Img from 'gatsby-image';
 
 
+const ImageInst = styled.div`
+max-width: 18px;
+width:100%;
+`
+
 
 const InstImg = () => {
 
@@ -18,13 +23,6 @@ const InstImg = () => {
         }
       }
     `);
-
-    const ImageInst = styled.div`
-    max-width: 18px;
-    width:100%;
-    `
-
-
     return (
         <ImageInst>
           <Img fluid = {file.childImageSharp.fluid}/>  

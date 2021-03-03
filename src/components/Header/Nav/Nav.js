@@ -1,14 +1,17 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 const Nav = () => {
     return (
         <>
-          <ul><a href="">Shop</a></ul>
-          <ul><a href="">Installation</a></ul>
-          <ul><a href="">About</a></ul>
-          <ul><a href="">Stories</a></ul>
-          <ul><a href="">Trade</a></ul>
-          <ul><a href="">Contact</a></ul>
+          <ul>
+            <li> <Link to='/Shop'>Shop</Link> </li>
+            <li> <Link to='/Installation'>Installation</Link> </li>
+            <li> <Link to='/About'>About</Link> </li>
+            <li> <Link to='/Stories'>Stories</Link> </li>
+            <li> <Link to='/Trade'>Trade</Link> </li>
+            <li> <Link to='/Contact'>Contact</Link> </li>
+          </ul>
         </>
     )
 }

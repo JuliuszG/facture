@@ -4,6 +4,10 @@ import {graphql , useStaticQuery} from 'gatsby';
 import Img from 'gatsby-image';
 
 
+const ImageFb = styled.div`
+max-width: 9px;
+width:100%;
+`
 
 const FbImg = () => {
 
@@ -18,12 +22,6 @@ const FbImg = () => {
         }
       }
     `);
-
-    const ImageFb = styled.div`
-    max-width: 9px;
-    width:100%;
-    `
-
 
     return (
         <ImageFb>
