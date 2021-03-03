@@ -1,7 +1,13 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import {graphql , useStaticQuery} from 'gatsby'; 
 import Img from 'gatsby-image';
+
+const Images = styled.div`
+max-width: 156.92px;
+height: 100%;
+`
 
 const Logo = () => {
     const { file } = useStaticQuery(graphql `
@@ -16,14 +22,9 @@ const Logo = () => {
       }
     `);
 
-      const Images = styled.div`
-        max-width: 156.92px;
-        height: 100%;
-      `
-
     return (
         <Images>
-            <Img fluid = {file.childImageSharp.fluid} />
+            <Link to ='/#' ><Img fluid = {file.childImageSharp.fluid} /> </Link>
         </Images>
 
         

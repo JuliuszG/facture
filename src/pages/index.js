@@ -2,8 +2,6 @@ import React from "react"
 import ProductComponent from "../components/landingPage/product-component/ProductComponent"
 import SEO from "../components/seo"
 import { graphql } from 'gatsby';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
 
 
 export const query = graphql`

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ColStyle = styled.div`
+const CopyStyle = styled.div`
 
 a{
     color: white;
@@ -23,12 +23,6 @@ font-family: Poppins, sans-serif;
     margin-left: 0;
     margin-bottom: 10px
 }
-
-@media (max-width: 590px){
-    max-width: 154px;
-    width: 100%;
-}
-
 `
 
-export default ColStyle;
+export default CopyStyle;
