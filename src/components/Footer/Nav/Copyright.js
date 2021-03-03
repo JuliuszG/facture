@@ -9,8 +9,8 @@ const Copyright = () => {
         <CopyStyle margin = '116px 0 0 0'>
           <CopyLiStyle>
               <CopyLiPosiotionC>© 2021 Facture Studio LLC</CopyLiPosiotionC>
-              <CopyLiPosiotion><a href="">Terms & Conditions</a></CopyLiPosiotion>
-              <CopyLiPosiotion><a href="">Privacy Policy</a></CopyLiPosiotion>
+              <CopyLiPosiotion><a href="/Terms&Conditions">Terms & Conditions</a></CopyLiPosiotion>
+              <CopyLiPosiotion><a href="/Privaty_Policy">Privacy Policy</a></CopyLiPosiotion>
           </CopyLiStyle>
         </CopyStyle>
     )

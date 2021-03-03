@@ -17,7 +17,7 @@ import PintImg from './style/PintImg';
          <ColStyle margin = '106px 0 0 0'>
              <TitleStyle>Connect</TitleStyle>
              <ul>
-                 <LiStyle> <Link to='/' >@facture_studio</Link> </LiStyle>
+                 <LiStyle> <Link to='/e-mail' >@facture_studio</Link> </LiStyle>
              </ul>
              <SocialImgStyle>
                 <a href="https://www.facebook.com/"><FbImg/></a>
