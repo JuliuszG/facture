@@ -1,7 +1,8 @@
 import React from "react"
 import ProductComponent from "../components/landingPage/product-component/ProductComponent"
 import SEO from "../components/seo"
-import { graphql } from 'gatsby'
+import { graphql } from 'gatsby';
+import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 
 
@@ -187,7 +188,6 @@ const IndexPage = ({ data }) => (
       }}
       titleSize={ '400px' }
     />
-    <Footer/>
   </>
 )
 export default IndexPage
