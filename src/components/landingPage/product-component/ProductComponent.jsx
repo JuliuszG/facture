@@ -1,7 +1,7 @@
 import React from 'react'
 import { ProductComponentWrapper, ProductImage, LeftImage, RightImage } from './styles.js'
 import { motion } from 'framer-motion'
-import { contentVariant, textVariant, imageVariant } from './animations'
+import { contentVariant, textVariant, imageVariant, leftImageVariant } from './animations'
 import { Link } from 'gatsby'
 import { useInView } from 'react-intersection-observer';
 import Image from 'gatsby-image'
@@ -9,7 +9,7 @@ import Image from 'gatsby-image'
 const ProductComponent = ({ alignment, themeColor, height, content, image, link, titleSize=false, doubleImage, categoryDecoration }) => {
     const [ref, inView] = useInView({
         triggerOnce: true,
-        threshold: 1
+        threshold: 0
       });
     return (
         <ProductComponentWrapper 
@@ -49,7 +49,11 @@ const ProductComponent = ({ alignment, themeColor, height, content, image, link,
             ) :
             (
                 <>
-                    <LeftImage>
+                    <LeftImage
+                        variants={ leftImageVariant }
+                        initial="hidden"
+                        animate={ inView ? "visible" : "hidden" }
+                    >
                         <Image 
                             style={{ height: "100%", width: "100%", objectFit: "cover" }} 
                             fluid={ image[0].src } 
@@ -57,7 +61,11 @@ const ProductComponent = ({ alignment, themeColor, height, content, image, link,
                             objectFit="cover"
                         />
                     </LeftImage>
-                    <RightImage>
+                    <RightImage
+                        variants={ leftImageVariant }
+                        initial="hidden"
+                        animate={ inView ? "visible" : "hidden" }
+                    >
                         <Image 
                             style={{ height: "100%", width: "100%" }} 
                             imgStyle={{ objectFit: "cover", objectPosition: "50% 85%" }}

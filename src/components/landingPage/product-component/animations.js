@@ -18,3 +18,13 @@ export const imageVariant = {
     visible: { scale: 1, transition: { duration: 1} },
     hidden: { scale: 1.1 },
 }
+
+export const leftImageVariant = {
+    visible: { scale: 1, opacity: 1, transition: { duration: 1} },
+    hidden: { scale: 1.1, opacity: 0 },
+}
+
+export const rightImageVariant = {
+    visible: { scale: 1, transition: { duration: 1} },
+    hidden: { scale: 1.1 },
+}
