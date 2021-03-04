@@ -24,7 +24,7 @@ const Search = () => {
         <SearchStyle>
           <IconSearch/>
           <form action="">
-             <InputStyle type="text" value= 'Search' /> 
+             <InputStyle type="text" placeholder= 'Search' /> 
           </form>
         </SearchStyle>
     )
