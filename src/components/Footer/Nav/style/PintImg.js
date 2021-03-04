@@ -3,6 +3,10 @@ import styled from 'styled-components';
 import {graphql , useStaticQuery} from 'gatsby'; 
 import Img from 'gatsby-image';
 
+const ImagePint = styled.div`
+max-width: 20px;
+width:100%;
+`
 
 
 const PintImg = () => {
@@ -18,12 +22,6 @@ const PintImg = () => {
         }
       }
     `);
-
-    const ImagePint = styled.div`
-    max-width: 20px;
-    width:100%;
-    `
-
 
     return (
         <ImagePint>

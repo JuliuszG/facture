@@ -5,6 +5,10 @@ const Container = styled.div`
     display: ${({ display }) => display && display}; 
     justify-content: ${({  content }) => content && content };
 
+    @media (max-width: 1116px){
+        flex-direction:column;
+    }
+
 `
 
 export default Container;

@@ -1,5 +1,4 @@
 import React from 'react';
-import {graphql , useStaticQuery} from 'gatsby'; 
 import Continer from '../Layout/Container';
 import Section from '../Layout/Section' ;
 import Form from './Form/Form';

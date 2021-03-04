@@ -1,29 +1,32 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import {graphql , useStaticQuery} from 'gatsby'; 
 import Img from 'gatsby-image';
+
+const Images = styled.div`
+width: 157px;
+height: 20px;
+margin-top: auto;
+margin-bottom: auto;
+`
 
 const Logo = () => {
     const { file } = useStaticQuery(graphql `
     {
         file(relativePath: {eq: "icon/Logo-Wordmark.png"}) {
           childImageSharp {
-            fluid(quality: 100) {
-                ...GatsbyImageSharpFluid
+            fluid(quality: 100, maxWidth: 157, maxHeight: 20) {
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }
       }
     `);
 
-      const Images = styled.div`
-        max-width: 156.92px;
-        height: 100%;
-      `
-
     return (
         <Images>
-            <Img fluid = {file.childImageSharp.fluid} />
+            <Link to ='/#' ><Img fluid = {file.childImageSharp.fluid} /> </Link>
         </Images>
 
         

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import TitleStyle from './style/TitleStyle';
 import LiStyle from './style/LiStyle';
 import ColStyle from './style/ColStyle';
@@ -8,10 +9,10 @@ const Col3 = () => {
         <ColStyle margin = '106px 0 0 0' >
             <ul>
                 <TitleStyle>Helpful Info</TitleStyle>
-                <LiStyle><a href="">FAQ</a></LiStyle>
-                <LiStyle><a href="">Returns</a></LiStyle>
-                <LiStyle><a href="">Shipping</a></LiStyle>
-                <LiStyle><a href="">Contact Us</a></LiStyle>
+                <LiStyle> <Link to='/faq' >FAQ</Link> </LiStyle>
+                <LiStyle> <Link to='/returns' >Returns</Link> </LiStyle>
+                <LiStyle> <Link to='/shipping' >Shipping</Link> </LiStyle>
+                <LiStyle> <Link to='/contactUs' >Contact Us</Link> </LiStyle>
             </ul>
         </ColStyle>
 
