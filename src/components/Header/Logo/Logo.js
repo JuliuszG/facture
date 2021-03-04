@@ -7,7 +7,8 @@ import Img from 'gatsby-image';
 const Images = styled.div`
 width: 157px;
 height: 20px;
-
+margin-top: auto;
+margin-bottom: auto;
 `
 
 const Logo = () => {
@@ -16,7 +17,7 @@ const Logo = () => {
         file(relativePath: {eq: "icon/Logo-Wordmark.png"}) {
           childImageSharp {
             fluid(quality: 100, maxWidth: 157, maxHeight: 20) {
-                ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }
