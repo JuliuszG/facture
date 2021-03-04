@@ -8,49 +8,49 @@ export const query = graphql`
   {
     section1: file(relativePath: {eq: "banner/banner1.png"}) {
       childImageSharp {
-        fluid(quality: 100) {
+        fluid(quality: 100, maxWidth: 1800) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
     section2: file(relativePath: {eq: "banner/banner2.png"}) {
       childImageSharp {
-        fluid(quality: 100)  {
+        fluid(quality: 100, maxWidth: 1800)  {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
     section3: file(relativePath: {eq: "banner/banner3.png"}) {
       childImageSharp {
-        fluid(quality: 100)  {
+        fluid(quality: 100, maxWidth: 1800)  {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
     section4: file(relativePath: {eq: "banner/banner4.png"}) {
       childImageSharp {
-        fluid(quality: 100)  {
+        fluid(quality: 100, maxWidth: 1800)  {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
     section5img1: file(relativePath: {eq: "banner/banner6_1.png"}) {
       childImageSharp {
-        fluid(quality: 100)  {
+        fluid(quality: 100, maxWidth: 1800)  {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
     section5img2: file(relativePath: {eq: "banner/banner6_2.png"}) {
       childImageSharp {
-        fluid(quality: 100)  {
+        fluid(quality: 100, maxWidth: 1800)  {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
     section6: file(relativePath: {eq: "banner/banner7.png"}) {
       childImageSharp {
-        fluid(quality: 100)  {
+        fluid(quality: 100, maxWidth: 1600)  {
           ...GatsbyImageSharpFluid_noBase64
         }
       }
