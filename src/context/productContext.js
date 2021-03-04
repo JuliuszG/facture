@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby'
 
 const query = graphql`
-    {
+{
   allShopifyCollection {
     edges {
       node {
@@ -10,11 +10,26 @@ const query = graphql`
           ...ShopifyProductFields
         }
         title
+        image {
+          localFile {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  allShopifyProduct {
+    edges {
+      node {
+        ...ShopifyProductFields
       }
     }
   }
 }
-
 `
 
 const defaultState = {
@@ -25,12 +40,14 @@ const ProductContext = React.createContext(defaultState);
 export default ProductContext;
 
 export function ProductContextProvider({ children }) {
-  const { allShopifyCollection } = useStaticQuery(query)
+  const { allShopifyCollection, allShopifyProduct } = useStaticQuery(query)
+  const prods = []
+  allShopifyProduct.edges.map(node => [...node])
   return (
     <ProductContext.Provider
       value={{
         products: [],
-        collections: allShopifyCollection.edges.map((node) => node),
+        collections: allShopifyCollection.edges.map(node => node),
       }}
     >
       {children}
